@@ -1,0 +1,104 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+ProcessException: ProcessException: Permission denied
+  Command: /media/chetan/2E19-ED71/spotify/android/gradlew -v
+
+```
+#0      runAsync (package:flutter_tools/src/base/process.dart:232:33)
+<asynchronous suspension>
+#1      runCheckedAsync (package:flutter_tools/src/base/process.dart:248:34)
+<asynchronous suspension>
+#2      _initializeGradle (package:flutter_tools/src/android/gradle.dart:225:9)
+<asynchronous suspension>
+#3      _ensureGradle (package:flutter_tools/src/android/gradle.dart:206:37)
+<asynchronous suspension>
+#4      _readGradleProject (package:flutter_tools/src/android/gradle.dart:134:31)
+<asynchronous suspension>
+#5      _gradleProject (package:flutter_tools/src/android/gradle.dart:111:34)
+<asynchronous suspension>
+#6      getGradleAppOut (package:flutter_tools/src/android/gradle.dart:105:29)
+<asynchronous suspension>
+#7      AndroidApk.fromAndroidProject (package:flutter_tools/src/application_package.dart:154:23)
+<asynchronous suspension>
+#8      ApplicationPackageFactory.getPackageForPlatform (package:flutter_tools/src/application_package.dart:46:32)
+<asynchronous suspension>
+#9      FlutterDevice.runHot (package:flutter_tools/src/resident_runner.dart:345:56)
+<asynchronous suspension>
+#10     HotRunner.run (package:flutter_tools/src/run_hot.dart:253:39)
+<asynchronous suspension>
+#11     RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:428:37)
+<asynchronous suspension>
+#12     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:559:18)
+#13     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#14     _rootRunUnary (dart:async/zone.dart:1132:38)
+#15     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#16     _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#17     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#18     Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#19     Future._complete (dart:async/future_impl.dart:473:7)
+#20     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#21     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:28:18)
+#22     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:294:13)
+#23     RunCommand.usageValues (package:flutter_tools/src/commands/run.dart)
+#24     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#25     _rootRunUnary (dart:async/zone.dart:1132:38)
+#26     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#27     _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#28     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#29     Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#30     Future._complete (dart:async/future_impl.dart:473:7)
+#31     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#32     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#33     _rootRun (dart:async/zone.dart:1124:13)
+#34     _CustomZone.run (dart:async/zone.dart:1021:19)
+#35     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#36     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#37     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#38     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:115:13)
+#39     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel unknown, v1.5.4, on Linux, locale en_GB.UTF-8)
+    [32m•[39m Flutter version 1.5.4 at /home/chetan/Downloads/flutter_linux_v1.1.8-beta/flutter
+    [32m•[39m Framework revision b593f5167b (3 months ago), 2019-04-22 07:51:33 -0700
+    [32m•[39m Engine revision ca31a7c57b
+    [32m•[39m Dart version 2.3.0 (build 2.3.0-dev.0.1 cf4444b803)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+    [32m•[39m Android SDK at /home/chetan/Android/Sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-28, build-tools 28.0.3
+    [32m•[39m Java binary at: /snap/android-studio/76/android-studio/jre/bin/java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b16-5323222)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Android Studio (version 3.4)
+    [32m•[39m Android Studio at /snap/android-studio/76/android-studio
+    [32m•[39m Flutter plugin version 35.3.1
+    [32m•[39m Dart plugin version 183.6270
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b16-5323222)
+
+[33m[!][39m Android Studio
+    [32m•[39m Android Studio at /home/chetan/android-studio
+    [31m✗[39m Flutter plugin not installed; this adds Flutter specific functionality.
+    [31m✗[39m Dart plugin not installed; this adds Dart specific functionality.
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1248-b01)
+
+[32m[✓][39m VS Code (version 1.36.0)
+    [32m•[39m VS Code at /usr/share/code
+    [32m•[39m Flutter extension version 3.2.0
+
+[32m[✓][39m Connected device (1 available)
+    [32m•[39m vivo 1609 • 4HAUMRTOPN6SDQVS • android-arm64 • Android 6.0 (API 23)
+
+[33m![39m Doctor found issues in 1 category.
+```
